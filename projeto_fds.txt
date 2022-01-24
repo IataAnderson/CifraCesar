@@ -1,0 +1,44 @@
+Vamos lá o que eu entendi. 
+1- cria um imput pra digitar o texto e 2 opções de marcar: 
+- cifra de cesar
+- base64
+
+2- converter para cifra de cesar :
+
+var frase = "";
+var alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var frase = prompt("Introduza a frase:").toLowerCase();
+var off = prompt("Introduza o deslocamento:");
+var x = parseInt(off);
+var keep = [];
+
+for (var i = 0; i < frase.length; i++)
+{
+ if(frase[i] != ' ')
+ {
+   for (var j = 0; j < alfa.length; j++)
+   {
+     if (frase[i] == alfa[j])
+     {
+       keep[i] = alfa[(j + x) % alfa.length];
+       break;
+     }
+   }
+ }
+ else
+ {
+   keep[i] = ' ';
+ }
+}
+alert(keep.join(""));
+
+3- ainda não sei como fazer a volta T.T
+
+4- converter para Base64 
+
+https://developer.mozilla.org/en-US/docs/Glossary/Base64
+
+5- ainda não sei como fazer a volta T.T
+
+
+
